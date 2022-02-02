@@ -34,6 +34,9 @@ console.log(repeat(testArray2, 4)); // output -> [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 
 #####  Javascript (*Pre-ES Way*)
 
 ```javascript
+let testArray1 = ['a', 'b', 'c', 'x', 'u'];
+let testArray2 = [1, 2, 3, 4, 5, 6];
+
 function repeatItems(items, iterationCount = 3) {
    if (!Array.isArray(items)) throw new Error('please provide an array!');
    var repeat = [];
@@ -51,6 +54,9 @@ console.log(repeat(testArray2, 4)); // output -> [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 
 #### PHP
 
 ```php
+$testArray1 = [1,2,3];
+$testArray2 = ['x', 'y', 'z'];
+
 function repeat($items, $iterationCount = 3) {
    if( !is_array($items) ) throw new Exception('Please provide an array!');
    $repeat = [];
