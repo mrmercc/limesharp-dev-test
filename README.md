@@ -21,9 +21,9 @@ let testArray1 = ['a', 'b', 'c', 'x', 'u'];
 let testArray2 = [1, 2, 3, 4, 5, 6];
 
 function repeat(items, iterationCount = 3) {
-	if (!Array.isArray(items)) throw new Error('Please provide an array!');
-	items = items.flat();
-	return Array(iterationCount).fill(items).flat();
+   if (!Array.isArray(items)) throw new Error('Please provide an array!');
+   items = items.flat();
+   return Array(iterationCount).fill(items).flat();
 }
 
 // Tests
@@ -35,12 +35,12 @@ console.log(repeat(testArray2, 4)); // output -> [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 
 
 ```javascript
 function repeatItems(items, iterationCount = 3) {
-	  if (!Array.isArray(items)) throw new Error('please provide an array!');
-	  var repeat = [];
-	  for (let i = 0; i < iterationCount; i++) {
-		repeat.push(items);
-	  }
-	  return (repeat = [].concat.apply([], repeat));
+   if (!Array.isArray(items)) throw new Error('please provide an array!');
+   var repeat = [];
+   for (let i = 0; i < iterationCount; i++) {
+      repeat.push(items);
+   }
+   return (repeat = [].concat.apply([], repeat));
  }
  
  // Tests
@@ -52,12 +52,12 @@ console.log(repeat(testArray2, 4)); // output -> [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 
 
 ```php
 function repeat($items, $iterationCount = 3) {
-	if( !is_array($items) ) throw new Exception('Please provide an array!');
-	$repeat = [];
-	for( $i=0; $i < $iterationCount; $i++ ) {
-		array_push($repeat, $items);
-	}
-	return array_merge(...$repeat);
+   if( !is_array($items) ) throw new Exception('Please provide an array!');
+   $repeat = [];
+   for( $i=0; $i < $iterationCount; $i++ ) {
+      array_push($repeat, $items);
+   }
+   return array_merge(...$repeat);
 }
 
 // tests
@@ -104,11 +104,11 @@ let testString = 'liMeSHArp DeveLoper TEST';
 let anotherString = 'In the SEARCH OF INcreDIBle';
 
 function reformat(word) {
-  if (typeof word !== 'string') throw new Error('Please enter valid string');
-  let pattern = /[aeiou]/gi // g: for all matches, i: case-insensitive
-  word = word.replace(pattern, '').toLowerCase();
-  word = word.charAt(0).toUpperCase() + word.slice(1);
-  return word;
+   if (typeof word !== 'string') throw new Error('Please enter valid string');
+   let pattern = /[aeiou]/gi // g: for all matches, i: case-insensitive
+   word = word.replace(pattern, '').toLowerCase();
+   word = word.charAt(0).toUpperCase() + word.slice(1);
+   return word;
 }
 
 // tests 
@@ -126,9 +126,9 @@ $testString = 'liMeSHArp DeveLoper TEST';
 $anotherTestString = 'In the SEARCH OF INcreDIBle';
 
 function reformat($sentence) {
-		$pattern = "/[aeiou]/i";
-		$replace = '';
-		return ucfirst(strtolower(preg_replace($pattern, $replace, $sentence)));
+   $pattern = "/[aeiou]/i";
+   $replace = '';
+   return ucfirst(strtolower(preg_replace($pattern, $replace, $sentence)));
 }
 
 // tests
